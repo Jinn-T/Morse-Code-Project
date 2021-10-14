@@ -26,6 +26,7 @@ const morseAlpha = {
     y: "-.--",
     z: "--..",
     "/": "/",
+    " ": " ",
 };
 
 console.log(morseAlpha);
@@ -42,13 +43,12 @@ translateBtn.addEventListener("click", (event) => {
     // const test = textInput.slice(0, 5);
     // console.log(test);
     if (textInput.slice(0, 4).includes("-", ".", "/", " ")) {
-        //remove spaces with regex
-        const morseArr = textInput.split("/");
+        const morseArr = textInput.split(" ");
         console.log("splitting morse words", morseArr);
+        //need to find a way to replace / with an empty string, maybe regex??
 
-        // const stringArr = morseArr.map(String);
-        // console.log(stringArr);
-
+        // matching our morse values with morse values in our object.
+        // then outputting the key (which is our english letter)
         const toEnglish = morseArr.map((letter) => {
             Object.values(morseAlpha).includes(letter);
             return Object.keys(morseAlpha).find(
@@ -56,33 +56,33 @@ translateBtn.addEventListener("click", (event) => {
             );
         });
         console.log(toEnglish);
+
+        // converting our english array to a string
+        const engToString = toEnglish.join("");
+        console.log(engToString);
+
+        output.innerHTML = engToString;
+    } else {
+        const engArr = textInput.split("");
+        console.log(engArr);
+
+        // replacing english with morse
+
+        const toMorse = engArr.map((letter) => {
+            Object.keys(morseAlpha).includes(letter);
+            return morseAlpha[letter];
+        });
+        console.log(toMorse);
+
+        // converting morse array to string
+        const morseToString = toMorse.join("");
+        console.log(morseToString);
+
+        //morse to output display
+        output.innerHTML = morseToString;
+
+        // .... . .-.. .-.. --- / -- -.-- / -. .- -- . / .. ... / .--- .. -. -.
     }
-
-    //
-
-    //---------------------
-
-    //
-
-    // english to morse
-
-    const engArr = textInput.split("");
-    console.log(engArr);
-
-    // replacing english with morse
-
-    const toMorse = engArr.map((letter) => {
-        Object.keys(morseAlpha).includes(letter);
-        return morseAlpha[letter];
-    });
-    console.log(toMorse);
-
-    // converting morse array to string
-    const morseToString = toMorse.join("");
-    console.log(morseToString);
-
-    //morse to output display
-    output.innerHTML = morseToString;
 });
 
 // reset all displays
