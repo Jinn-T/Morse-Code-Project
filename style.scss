@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background-color: #e8dfc0;
+}
 
 .container {
     padding: 5% 5% 1% 5%;
@@ -28,6 +31,8 @@
         height: 300px;
         padding: 10px;
         border-radius: 8px;
+        outline-color: rgb(27, 143, 27);
+        background-color: #e8dfc0;
     }
 
     .btn-container {
@@ -38,13 +43,37 @@
     }
     .btn {
         border-radius: 10px;
-        background-color: beige;
+        // background-color: #f8981e;
         width: 200px;
         height: 50px;
         margin: 10px;
+        font-size: 15px;
     }
 
     .output {
         outline: none;
+    }
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alpha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    flex-wrap: wrap;
+    margin-top: 5%;
+
+    &__boxes {
+        border: solid 3px #f8981e;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 5px;
+        font-size: 22px;
     }
 }

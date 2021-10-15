@@ -3,7 +3,6 @@ const morseAlpha = {
     b: "-..",
     c: "-.-.",
     d: "-..",
-    h: "....",
     e: ".",
     f: "..-.",
     g: "--.",
@@ -32,7 +31,7 @@ const morseAlpha = {
 const alphaMorse = Object.entries(morseAlpha).reduce((acc, [key, value]) => {
     acc[value] = key;
     return acc;
-}, {});
+}, {}); // here we are settine the staring value as an empty object
 
 console.log(morseAlpha);
 
@@ -59,16 +58,6 @@ translateBtn.addEventListener("click", (event) => {
             return letter.split(" ");
         });
         console.log(morse);
-
-        // matching our morse values with morse values in our object.
-        // then outputting the key (which is our english letter)
-        // const toEnglish = morse.map((letter) => {
-        //     Object.values(morseAlpha).includes(letter);
-        //     return Object.keys(morseAlpha).find(
-        //         (key) => morseAlpha[key] === letter
-        //     );
-        // });
-        // console.log(toEnglish);
 
         const toEnglish = morse.map((word) => {
             return word

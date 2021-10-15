@@ -1,46 +1,74 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #e8dfc0;
 }
 
 .container {
-    padding: 5% 5% 1% 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 5% 5% 1% 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .container__lInput {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .container ::placeholder {
-    font-size: 17px;
+  font-size: 17px;
 }
 .container textarea {
-    font-size: 18px;
-    margin: 20px;
-    resize: none;
-    overflow-wrap: break-word;
-    width: 300px;
-    height: 300px;
-    padding: 10px;
-    border-radius: 8px;
+  font-size: 18px;
+  margin: 20px;
+  resize: none;
+  overflow-wrap: break-word;
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  border-radius: 8px;
+  outline-color: #1b8f1b;
+  background-color: #e8dfc0;
 }
 .container .btn-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .container .btn {
-    border-radius: 10px;
-    background-color: beige;
-    width: 200px;
-    height: 50px;
-    margin: 10px;
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+  font-size: 15px;
 }
 .container .output {
-    outline: none;
+  outline: none;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alpha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+.alpha__boxes {
+  border: solid 3px #f8981e;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  font-size: 22px;
 }
