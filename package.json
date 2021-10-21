@@ -1,0 +1,25 @@
+{
+    "name": "morsecodeproject",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Jinn-T/Morse-Code-Project.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Jinn-T/Morse-Code-Project/issues"
+    },
+    "homepage": "https://github.com/Jinn-T/Morse-Code-Project#readme",
+    "devDependencies": {
+        "@babel/core": "^7.15.8",
+        "@babel/preset-env": "^7.15.8",
+        "babel-jest": "^27.3.1",
+        "jest": "^27.2.5"
+    }
+}
